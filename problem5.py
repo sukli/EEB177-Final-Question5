@@ -23,6 +23,14 @@ def print_families(dic, species_threshold):
     elif (species_threshold > max_species_num):
         print "No families have more than %d species" % species_threshold
 
+# print families with 1 species
+def print_families_1(dic):
+    # iterate through the keys in sorted order
+    for key in sorted(dic):
+        # check if species number is 1
+        if (dic[key] == 1):
+            print key
+
 def main():
     dic = read_csv_file_to_dic("richness_fishbase_family.csv")
 
